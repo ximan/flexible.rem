@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript">
+!function(a){var j,b=a.document,c=b.documentElement,d=a.orientation||0,e=640,f=9/16,g=100,h=a.devicePixelRatio,i=h?1/h:1;b.write('<meta name="viewport" content="initial-scale='+i+",maximum-scale="+i+",minimum-scale="+i+',user-scalable=0">'),j=c.getBoundingClientRect().width,90==Math.abs(d)&&(j*=f),c.style.fontSize=j/h*g/(e/h)+"px"}(window);
+</script>
+    <title>flexible.rem</title>
+<style>
+*{
+    margin: 0;
+    padding:0;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-text-size-adjust:none;
+}
+html{
+    height: 100%;
+}
+body{
+    font-size: 24px;
+}
+
+.text{
+    /*height: 100px;*/
+    line-height: .3rem;
+    border-top: .01rem solid #000;
+    border-bottom: 1px solid #000;
+    margin: .2rem 0;
+    padding: .1rem 0;
+    font-size: .24rem;
+    background-color: #eee;
+}
+.box{
+    overflow: hidden;
+    margin-bottom: .2rem;
+}
+.box_1 .item{
+    width: 50%;
+    height: 320px;
+    font-size: 28px;
+}
+.box_2 .item{
+    width: 3.2rem;
+    height: 3.2rem;
+    font-size: .28rem;
+}
+.box .item{
+    float: left;
+    background-color: #eee;
+}
+.box .item:first-child{
+    background-color: #ddd;
+}
+</style>
+</head>
+<body>
+<div class="box box_1">
+    <div class="item">宽度：50%<br>高度：320px<br>字号：28px</div>
+    <div class="item">不同设备，不同宽度，<br>不一定是正方形</div>
+</div>
+<div class="box box_2">
+    <div class="item">宽度：3.2rem<br>高度：3.2rem<br>字号：28px</div>
+    <div class="item">不同设备，不同宽度，<br>永远是正方形</div>
+</div>
+<p class="text">一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十<br>（font-size:.24rem，横竖屏文字同样大小；不同宽度设备文字个数相同）</p>
+<p>没有设置字号的文字</p>
+
+<!-- <p>一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十</p> -->
+</body>
+</html>
