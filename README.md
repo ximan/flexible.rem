@@ -14,6 +14,11 @@
 * js获取网页宽度，计算`html`合适的字号，实现弹性模块、边距、字号等
 * js动态计算viewport的initial-scale初始缩放值，实现1px边框
 
+## 示例
+
+![扫一扫](demo.png)
+[DEMO链接](http://ximan.github.io/flexible.rem/)
+
 ## 用法
 
 1. 把`<head>`里`<meta name="viewport">`删掉，在此位置加本js，建议对本js做`内敛处理`
